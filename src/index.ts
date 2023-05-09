@@ -69,7 +69,7 @@ app.get("/", (c) => {
   const latest = new Version(latest_version);
   if (version.isOlder(latest)) {
     const update_url = new URL(
-      "https://github.com/creeper-0910/adg_update_srv/releases/latest/download/adguard.apk",
+      "https://github.com/ROMLab-JP/AdGuardJPUpdateSRV/releases/latest/download/adguard.apk",
     );
 
     const content: API = {
@@ -77,7 +77,7 @@ app.get("/", (c) => {
       updateURL: update_url.toString(),
       updatePageURL: "https://kb.adguard.com/general/adguard-beta-testing-program",
       releaseNotes: "これは、AdGuardのNightlyビルドの更新です。このアップデートチャネルは不安定であることをご了承ください。\r\n\r\n## バージョン "+latest_display_version.toString()+"\r\n\r\n* [Fixed] JP Hack!",
-      moreInfoURL: "* [Fixed] JP Hack!",
+      moreInfoURL: "* [Fixed] Unofficial Update!",
       forced: false,
       dotnetVersion: null,
       dotnetDownloadLink: null,
